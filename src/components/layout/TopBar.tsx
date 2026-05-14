@@ -48,6 +48,19 @@ export default function TopBar() {
             <LocationOnIcon className="!text-base" aria-hidden="true" />
             <span>{topBarData.location}</span>
           </span>
+          <a
+            href={`mailto:${topBarData.email}`}
+            className="hidden items-center gap-1.5 transition-colors hover:text-primary-900 lg:inline-flex"
+          >
+            <EmailIcon className="!text-base" aria-hidden="true" />
+            <span>{topBarData.email}</span>
+          </a>
+        </div>
+
+        {/* Office hours */}
+        <div className="hidden items-center gap-1.5 lg:flex">
+          <AccessTimeIcon className="!text-base" aria-hidden="true" />
+          <span>{topBarData.hours}</span>
         </div>
 
         {/* Social icons */}
