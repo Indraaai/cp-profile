@@ -2,7 +2,7 @@ import type { HomePageData } from "@/src/types";
 
 export const homePageData: HomePageData = {
   hero: {
-    kicker: "PLATFORM EDUKASI TERPERCAYA",
+    kicker: "LEARNING WITH US",
     headline: "Belajar Tanpa Batas, *Tumbuh Bersama*",
     subHeadline:
       "Temukan pengalaman belajar yang menyenangkan dan efektif bersama mentor berpengalaman untuk meraih potensi terbaik Anda.",
