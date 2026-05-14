@@ -3,21 +3,92 @@
 @tailwind utilities;
 
 :root {
+  /* Background & Foreground */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e293b;
+
+  /* Primary - Indigo */
+  --primary-50: #EEF2FF;
+  --primary-100: #E0E7FF;
+  --primary-200: #C7D2FE;
+  --primary-300: #A5B4FC;
+  --primary-400: #818CF8;
+  --primary-500: #6366F1;
+  --primary-600: #4F46E5;
+  --primary-700: #4338CA;
+  --primary-800: #3730A3;
+  --primary-900: #312E81;
+
+  /* Secondary - Green */
+  --secondary-50: #F0FDF4;
+  --secondary-100: #DCFCE7;
+  --secondary-200: #BBF7D0;
+  --secondary-300: #86EFAC;
+  --secondary-400: #4ADE80;
+  --secondary-500: #22C55E;
+  --secondary-600: #16A34A;
+  --secondary-700: #15803D;
+  --secondary-800: #166534;
+  --secondary-900: #14532D;
+
+  /* Accent - Amber */
+  --accent-50: #FFFBEB;
+  --accent-100: #FEF3C7;
+  --accent-200: #FDE68A;
+  --accent-300: #FCD34D;
+  --accent-400: #FBBF24;
+  --accent-500: #F59E0B;
+  --accent-600: #D97706;
+  --accent-700: #B45309;
+  --accent-800: #92400E;
+  --accent-900: #78350F;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Light marketing site keeps consistent palette across schemes */
+    --background: #ffffff;
+    --foreground: #1e293b;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans text-body;
+  }
+
+  h1 {
+    @apply text-h1 font-heading;
+  }
+
+  h2 {
+    @apply text-h2 font-heading;
+  }
+
+  h3 {
+    @apply text-h3 font-heading;
+  }
+
+  h4 {
+    @apply text-h4 font-heading;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
 }
 
 @layer utilities {
